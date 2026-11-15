@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { data, Form, Link, useActionData, useNavigation } from "react-router";
-import { sendConcernEmail } from "../lib/Mail.server";
+import { sendConcernEmail } from "../lib/mail.server";
 
 export function meta() {
   return [
