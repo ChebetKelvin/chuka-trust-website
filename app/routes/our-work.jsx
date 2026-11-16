@@ -1,6 +1,5 @@
 import { Link } from "react-router";
 import PageHeader from "../components/PageHeader";
-import Concerncta from "../components/Concerncta";
 
 export function meta() {
   return [
@@ -14,16 +13,6 @@ export function meta() {
 }
 
 const AREAS = [
-  {
-    id: "land-conflicts",
-    title: "Land conflicts and land rights",
-    text: [
-      "The trust\u2019s first purposes are to identify the areas within the Chuka community where land conflicts remain unresolved, and to establish and affirm the legal land rights of the Chuka people.",
-      "If you know of a land conflict, you can report it to us.",
-    ],
-    link: { to: "/get-involved#report", label: "Report a land concern" },
-    activities: [],
-  },
   {
     id: "communal-land",
     title: "Communal land",
@@ -138,8 +127,6 @@ export default function OurWork() {
           </div>
         </section>
       ))}
-
-      <Concerncta />
     </>
   );
 }

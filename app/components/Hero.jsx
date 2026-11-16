@@ -80,12 +80,6 @@ export default function Hero() {
           >
             Learn who we are
           </Link>
-          <Link
-            to="/get-involved#report"
-            className="inline-flex min-h-12 items-center justify-center rounded-md border-2 border-cream/70 px-6 py-3 font-bold text-cream no-underline hover:bg-cream hover:text-forest focus-visible:outline-cream"
-          >
-            Report a land concern
-          </Link>
         </div>
       </div>
     </section>

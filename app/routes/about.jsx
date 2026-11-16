@@ -272,9 +272,6 @@ export default function About() {
           <Link to="/resources" className={textLink}>
             View our registration documents
           </Link>
-          <Link to="/get-involved#report" className={textLink}>
-            Report a land concern
-          </Link>
         </div>
       </section>
     </>

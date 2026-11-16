@@ -210,13 +210,6 @@ export default function Contact() {
                 form.
               </p>
             )}
-            <p className="mt-8 text-lg">
-              Have a land concern? Please use the{" "}
-              <Link to="/get-involved#report" className={textLink}>
-                report form
-              </Link>{" "}
-              instead, so we can see the details we need.
-            </p>
           </div>
 
           <div className="lg:col-span-7">

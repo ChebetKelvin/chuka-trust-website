@@ -3,7 +3,6 @@ import Hero from "../components/Hero";
 import TrustFacts from "../components/Trustfacts";
 import WhatWeDo from "../components/Whatwedo";
 import TrusteesPreview from "../components/TrusteesPreview";
-import Concerncta from "../components/Concerncta";
 
 export function meta() {
   return [
@@ -24,7 +23,6 @@ export default function Home() {
       <WhatWeDo />
       <AboutPreview />
       <TrusteesPreview />
-      <Concerncta />
     </div>
   );
 }

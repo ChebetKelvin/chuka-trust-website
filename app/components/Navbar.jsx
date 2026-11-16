@@ -111,13 +111,6 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-
-            <Link
-              to="/get-involved#report"
-              className="block min-h-12 rounded-md bg-forest px-5 py-3.5 text-center font-bold text-cream no-underline hover:bg-forest-deep nav:whitespace-nowrap nav:px-4.5 nav:py-2.5"
-            >
-              Report a land concern
-            </Link>
           </nav>
         </div>
       </header>
