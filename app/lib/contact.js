@@ -1,6 +1,6 @@
 export const CONTACT = {
   address: "P.O. Box 49, Magumoni",
-  phone: "0713 733 923",
+  phone: "+254 710 359001",
   whatsapp: "", // international format, digits only. Fill in "254713733923" once the client confirms this number is on WhatsApp.
   email: "machukaatiriribururi@gmail.com",
 };
