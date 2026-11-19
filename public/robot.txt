@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://atiriribururimachukatrust.com/sitemap.xml
