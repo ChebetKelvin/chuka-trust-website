@@ -3,11 +3,53 @@ import PageHeader from "../components/PageHeader";
 
 export function meta() {
   return [
-    { title: "Resources | Atiriri Bururi Ma Chuka Trust" },
+    {
+      title: "Resources & Official Documents | Atiriri Bururi Ma Chuka Trust",
+    },
     {
       name: "description",
       content:
-        "Registration details and official documents of Atiriri Bururi Ma Chuka Trust, a registered community trust working for the land rights of the Chuka people.",
+        "Access registration details and official documents of Atiriri Bururi Ma Chuka Trust, a registered community trust supporting the land rights of the Chuka people.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Atiriri Bururi Ma Chuka Trust documents, trust registration documents, Chuka community trust, official trust records, Chuka land rights",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://atiriribururimachukatrust.com/resources",
+    },
+    {
+      property: "og:title",
+      content: "Resources & Official Documents | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      property: "og:description",
+      content:
+        "Explore registration details and official documents of Atiriri Bururi Ma Chuka Trust.",
+    },
+    {
+      property: "og:url",
+      content: "https://atiriribururimachukatrust.com/resources",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Resources | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Access official registration details and documents of Atiriri Bururi Ma Chuka Trust.",
     },
   ];
 }

@@ -3,11 +3,54 @@ import PageHeader from "../components/PageHeader";
 
 export function meta() {
   return [
-    { title: "Trustees | Atiriri Bururi Ma Chuka Trust" },
+    {
+      title:
+        "Trustees | Leadership & Governance – Atiriri Bururi Ma Chuka Trust",
+    },
     {
       name: "description",
       content:
-        "Meet the 11 registered trustees of Atiriri Bururi Ma Chuka Trust, and learn how the trustees are appointed and held accountable.",
+        "Meet the 11 registered trustees of Atiriri Bururi Ma Chuka Trust and learn how they are appointed, their leadership responsibilities and accountability.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Atiriri Bururi Ma Chuka Trust trustees, Chuka Trust leadership, registered trustees, Trust governance, trustee accountability",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://atiriribururimachukatrust.com/trustees",
+    },
+    {
+      property: "og:title",
+      content: "Trustees | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      property: "og:description",
+      content:
+        "Meet the 11 registered trustees and discover how leadership, appointments and accountability work within Atiriri Bururi Ma Chuka Trust.",
+    },
+    {
+      property: "og:url",
+      content: "https://atiriribururimachukatrust.com/trustees",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Trustees | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Discover the leadership and governance of Atiriri Bururi Ma Chuka Trust and meet its 11 registered trustees.",
     },
   ];
 }

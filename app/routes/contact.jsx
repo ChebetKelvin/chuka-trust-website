@@ -9,24 +9,72 @@ export function meta() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Atiriri Bururi Ma Chuka Trust",
+    url: "https://atiriribururimachukatrust.com/",
     address: {
       "@type": "PostalAddress",
       postOfficeBoxNumber: "49",
       addressLocality: "Magumoni",
       addressCountry: "KE",
     },
-    ...(CONTACT.phone && { telephone: toE164(CONTACT.phone) }),
-    ...(CONTACT.email && { email: CONTACT.email }),
+    ...(CONTACT.phone && {
+      telephone: toE164(CONTACT.phone),
+    }),
+    ...(CONTACT.email && {
+      email: CONTACT.email,
+    }),
   };
 
   return [
-    { title: "Contact | Atiriri Bururi Ma Chuka Trust" },
+    {
+      title: "Contact Us | Atiriri Bururi Ma Chuka Trust",
+    },
     {
       name: "description",
       content:
-        "Contact Atiriri Bururi Ma Chuka Trust by phone, email or post (P.O. Box 49, Magumoni), or send the trust a message.",
+        "Contact Atiriri Bururi Ma Chuka Trust by phone, email or post at P.O. Box 49, Magumoni, or send us a message through our website.",
     },
-    { "script:ld+json": structuredData },
+    {
+      name: "keywords",
+      content:
+        "Contact Atiriri Bururi Ma Chuka Trust, Chuka Trust contacts, Magumoni community trust, Chuka community",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://atiriribururimachukatrust.com/contact",
+    },
+    {
+      property: "og:title",
+      content: "Contact Us | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      property: "og:description",
+      content:
+        "Get in touch with Atiriri Bururi Ma Chuka Trust by phone, email, post or through our website.",
+    },
+    {
+      property: "og:url",
+      content: "https://atiriribururimachukatrust.com/contact",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Contact | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      name: "twitter:description",
+      content: "Contact Atiriri Bururi Ma Chuka Trust in Magumoni, Kenya.",
+    },
+    {
+      "script:ld+json": structuredData,
+    },
   ];
 }
 

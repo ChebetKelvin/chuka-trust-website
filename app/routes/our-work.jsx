@@ -3,11 +3,53 @@ import PageHeader from "../components/PageHeader";
 
 export function meta() {
   return [
-    { title: "Our Work | Atiriri Bururi Ma Chuka Trust" },
+    {
+      title: "Our Work | Chuka Community Land Rights",
+    },
     {
       name: "description",
       content:
-        "How Atiriri Bururi Ma Chuka Trust works for the land rights of the Chuka people: land conflicts, communal land, dispute resolution, landless families and research.",
+        "Explore how Atiriri Bururi Ma Chuka Trust addresses land rights, land conflicts, communal land, dispute resolution, landless families and research for the Chuka people.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Chuka community land rights, Atiriri Bururi Ma Chuka Trust, communal land, land conflicts, land dispute resolution, landless families, Chuka land research",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://atiriribururimachukatrust.com/our-work",
+    },
+    {
+      property: "og:title",
+      content: "Our Work | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      property: "og:description",
+      content:
+        "Learn about the Trust's work on Chuka land rights, communal land, dispute resolution and research.",
+    },
+    {
+      property: "og:url",
+      content: "https://atiriribururimachukatrust.com/our-work",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "Our Work | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Discover the Trust's work supporting land rights and communal land issues affecting the Chuka people.",
     },
   ];
 }

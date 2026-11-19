@@ -3,11 +3,53 @@ import PageHeader from "../components/PageHeader";
 
 export function meta() {
   return [
-    { title: "About Us | Atiriri Bururi Ma Chuka Trust" },
+    {
+      title: "About Us | History of Atiriri Bururi Ma Chuka Trust",
+    },
     {
       name: "description",
       content:
-        "The story of Magundu Ma Chuka, the ancestral land of the Chuka people, and how Atiriri Bururi Ma Chuka Trust was formed, registered and held accountable.",
+        "Discover the history of Magundu Ma Chuka, the ancestral land of the Chuka people, and how Atiriri Bururi Ma Chuka Trust was formed, registered and held accountable.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Atiriri Bururi Ma Chuka Trust, Magundu Ma Chuka, Chuka ancestral land, Chuka community history",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: "https://atiriribururimachukatrust.com/about",
+    },
+    {
+      property: "og:title",
+      content: "About Us | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      property: "og:description",
+      content:
+        "Explore the history of Magundu Ma Chuka and the formation of Atiriri Bururi Ma Chuka Trust.",
+    },
+    {
+      property: "og:url",
+      content: "https://atiriribururimachukatrust.com/about",
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      name: "twitter:title",
+      content: "About Us | Atiriri Bururi Ma Chuka Trust",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Learn about Magundu Ma Chuka and the history of Atiriri Bururi Ma Chuka Trust.",
     },
   ];
 }
