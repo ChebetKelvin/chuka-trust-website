@@ -1,11 +1,10 @@
 export const CONTACT = {
   address: "P.O. Box 49, Magumoni",
   phone: "+254 710 359001",
-  whatsapp: "", // international format, digits only. Fill in "254713733923" once the client confirms this number is on WhatsApp.
+  whatsapp: "",
   email: "machukaatiriribururi@gmail.com",
 };
 
-// "0713 733 923" -> "+254713733923" (works for tel: links and structured data)
 export function toE164(phone) {
   const digits = String(phone).replace(/\D/g, "");
   if (digits.startsWith("254")) return `+${digits}`;

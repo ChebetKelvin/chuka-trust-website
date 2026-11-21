@@ -1,11 +1,5 @@
 import { Link } from "react-router";
-
-// Fill these in when the client supplies them. Empty values are simply not shown.
-const CONTACT = {
-  phone: "+254728362827", // e.g. "+254 7XX XXX XXX"
-  whatsapp: "+254728362827", // international format, digits only, e.g. "2547XXXXXXXX"
-  email: "info@yourdomain.or.ke", // e.g. "info@yourdomain.or.ke"
-};
+import { CONTACT, telHref } from "../lib/contact";
 
 const LINKS = [
   { to: "/about", label: "About" },
@@ -14,7 +8,6 @@ const LINKS = [
   { to: "/resources", label: "Resources" },
   { to: "/news", label: "News" },
   { to: "/contact", label: "Contact" },
-  { to: "/get-involved#report", label: "Report a land concern" },
 ];
 
 const linkClass =
@@ -53,13 +46,10 @@ export default function Footer() {
         <div className="lg:col-span-4">
           <h2 className="font-display text-lg font-bold text-cream">Contact</h2>
           <address className="mt-3 space-y-2 not-italic">
-            <p>P.O. Box 49, Magumoni</p>
+            <p>{CONTACT.address}</p>
             {CONTACT.phone && (
               <p>
-                <a
-                  href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
-                  className={linkClass}
-                >
+                <a href={telHref(CONTACT.phone)} className={linkClass}>
                   {CONTACT.phone}
                 </a>
               </p>
@@ -67,7 +57,7 @@ export default function Footer() {
             {CONTACT.whatsapp && (
               <p>
                 <a
-                  href={`https://wa.me/${CONTACT.whatsapp}`}
+                  href={`https://wa.me/${CONTACT.whatsapp.replace(/\D/g, "")}`}
                   className={linkClass}
                   rel="noopener"
                 >
