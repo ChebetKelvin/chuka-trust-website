@@ -59,7 +59,7 @@ export default function Navbar() {
             className="flex min-w-0 items-center gap-3 text-forest no-underline"
           >
             <img
-              src="/logo.png"
+              src="/logo1.png"
               alt=""
               width="56"
               height="56"
