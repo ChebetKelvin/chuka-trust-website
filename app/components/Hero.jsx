@@ -1,62 +1,36 @@
 import { Link } from "react-router";
 
-const CX = 520;
-const CY = 300;
-
-function ringPath(i) {
-  const base = 45 + i * 40;
-  const phase = i * 0.35;
-  const steps = 96;
-  const pts = [];
-  for (let s = 0; s < steps; s++) {
-    const t = (s / steps) * Math.PI * 2;
-    const wobble =
-      1 +
-      0.1 * Math.sin(3 * t + 0.6 + phase) +
-      0.06 * Math.sin(5 * t + 1.9 - phase);
-    const r = base * wobble;
-    const x = CX + r * 1.3 * Math.cos(t);
-    const y = CY + r * 0.9 * Math.sin(t);
-    pts.push(`${s === 0 ? "M" : "L"}${x.toFixed(1)} ${y.toFixed(1)}`);
-  }
-  return `${pts.join(" ")} Z`;
-}
-
-const RINGS = Array.from({ length: 11 }, (_, i) => ringPath(i));
-
-const fade = "linear-gradient(to right, transparent 0%, black 55%)";
-
 export default function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative overflow-hidden bg-forest text-cream"
+      className="relative flex min-h-136 flex-col overflow-hidden bg-forest-deep text-cream lg:min-h-160"
     >
-      {/* Contour lines draw themselves once on load, then stay still. */}
-      <svg
-        aria-hidden="true"
-        focusable="false"
-        viewBox="0 0 800 600"
-        preserveAspectRatio="xMidYMid slice"
-        className="pointer-events-none absolute inset-y-0 right-0 h-full w-full text-gold lg:w-[72%]"
-        style={{ maskImage: fade, WebkitMaskImage: fade }}
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      >
-        {RINGS.map((d, i) => (
-          <path
-            key={i}
-            d={d}
-            pathLength="1"
-            strokeOpacity={Math.max(0.18, 0.6 - i * 0.04)}
-            className="animate-draw [stroke-dasharray:1] [stroke-dashoffset:1] motion-reduce:animate-none motion-reduce:[stroke-dashoffset:0]"
-            style={{ animationDelay: `${i * 140}ms` }}
-          />
-        ))}
-      </svg>
+      {/* Background photo. Save the client's image as public/images/hero.png */}
+      {/* Background photo: a tall crop for phones, a wide crop for desktop */}
+      <picture className="absolute inset-0">
+        <source media="(min-width: 64rem)" srcSet="/hero-desktop.png" />
+        <img
+          src="/hero-mobile.png"
+          alt=""
+          width="800"
+          height="1200"
+          fetchPriority="high"
+          className="size-full object-cover object-center"
+        />
+      </picture>
 
-      <div className="relative mx-auto max-w-304 px-4 py-16 sm:px-8 sm:py-24 lg:py-32">
+      {/* Dark overlay keeps the text readable on any photo */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-forest-deep/75 lg:hidden"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 hidden bg-linear-to-r from-forest-deep/90 via-forest-deep/70 to-forest-deep/20 lg:block"
+      />
+
+      <div className="relative mx-auto flex w-full max-w-304 flex-1 flex-col justify-center px-4 py-16 sm:px-8 sm:py-24">
         <h1
           id="hero-heading"
           className="max-w-3xl font-display text-4xl leading-[1.1] font-bold sm:text-5xl lg:text-6xl"
@@ -73,7 +47,7 @@ export default function Hero() {
           generations to come.
         </p>
 
-        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:mt-12">
           <Link
             to="/about"
             className="inline-flex min-h-12 items-center justify-center rounded-md bg-gold px-6 py-3 font-bold text-ink no-underline hover:bg-[#e0b04f] focus-visible:outline-cream"
@@ -81,6 +55,13 @@ export default function Hero() {
             Learn who we are
           </Link>
         </div>
+      </div>
+
+      {/* Full name of the organisation */}
+      <div className="relative border-t-[3px] border-gold bg-forest-deep/85 backdrop-blur-sm">
+        <p className="mx-auto max-w-304 px-4 py-2 text-center font-display text-lg font-semibold text-cream sm:px-8 sm:text-xl lg:text-left">
+          Atiriri Bururi Ma Chuka Trust Registered Trustees
+        </p>
       </div>
     </section>
   );
