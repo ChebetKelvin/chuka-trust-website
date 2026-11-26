@@ -80,19 +80,16 @@ const REGISTRATION = [
   },
 ];
 
-// Add documents once the client has agreed to publish them. Save each file in
-// public/documents/ and list it here. While this list is empty, the page tells
-// visitors to ask the trust for copies.
-//
-// Example:
-// {
-//   title: "Certificate of Incorporation",
-//   description: "Issued by the Principal Land Registrar, 10 August 2023.",
-//   file: "/documents/certificate-of-incorporation.pdf",
-//   type: "PDF",
-//   size: "1.2 MB",
-// },
-const DOCUMENTS = [];
+const DOCUMENTS = [
+  {
+    title: "Appeal for Inclusivity in the County Consultation Forum",
+    description:
+      "Letter to the Governor of Tharaka Nithi County, 25 November 2026, asking for the trust's inclusion in the county budget consultation process.",
+    file: "/documents/appeal-to-governor-2026-11-25.pdf",
+    type: "PDF",
+    size: "1.2 MB", // use the real size
+  },
+];
 
 const textLink =
   "font-semibold text-forest underline decoration-gold decoration-2 underline-offset-4 hover:text-forest-deep";
@@ -147,31 +144,50 @@ export default function Resources() {
 
           <div className="max-w-2xl lg:col-span-8">
             {DOCUMENTS.length > 0 ? (
-              <ul className="divide-y divide-forest/20 border-y border-forest/20">
-                {DOCUMENTS.map(({ title, description, file, type, size }) => (
-                  <li key={file} className="py-6">
-                    <h3 className="font-display text-xl font-bold text-ink">
-                      {title}
-                    </h3>
-                    {description && (
-                      <p className="mt-2 text-lg">{description}</p>
-                    )}
-                    <a
-                      href={file}
-                      download
-                      className={`${textLink} mt-3 inline-block`}
-                    >
-                      Download
-                      {(type || size) && (
-                        <span className="font-normal text-ink/70">
-                          {" "}
-                          ({[type, size].filter(Boolean).join(", ")})
-                        </span>
+              <>
+                <ul className="divide-y divide-forest/20 border-y border-forest/20">
+                  {DOCUMENTS.map(({ title, description, file, type, size }) => (
+                    <li key={file} className="py-6">
+                      <h3 className="font-display text-xl font-bold text-ink">
+                        {title}
+                      </h3>
+                      {description && (
+                        <p className="mt-2 text-lg">{description}</p>
                       )}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+                      <p className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
+                        <a
+                          href={file}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={textLink}
+                        >
+                          View
+                          <span className="sr-only">
+                            {" "}
+                            {title} (opens in a new tab)
+                          </span>
+                        </a>
+                        <a href={file} download className={textLink}>
+                          Download
+                          {(type || size) && (
+                            <span className="font-normal text-ink/70">
+                              {" "}
+                              ({[type, size].filter(Boolean).join(", ")})
+                            </span>
+                          )}
+                        </a>
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-lg">
+                  Copies of the Certificate of Incorporation and the trust deed
+                  are available on request.{" "}
+                  <Link to="/contact" className={textLink}>
+                    Ask for a copy
+                  </Link>
+                </p>
+              </>
             ) : (
               <div className="space-y-4 text-lg">
                 <p>
